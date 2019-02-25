@@ -20,7 +20,7 @@ pipeline {
         sh 'whoami'
         sh 'chmod 777 ./jenkins/scripts/deliver.sh'
         sleep 3
-        sh 'ssh root@10.15.4.48'
+        sh './jenkins/scripts/deliver.sh'
         }
       }
     }

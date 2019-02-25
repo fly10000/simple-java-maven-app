@@ -12,8 +12,10 @@ pipeline {
             }
         }
         stage('Deliver') { 
-            echo 'upload file'
+           
             steps{
+                 echo 'upload file'
+                
                 sshPublisher(
                     publishers: [
                         sshPublisherDesc(

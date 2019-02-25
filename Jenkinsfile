@@ -14,11 +14,14 @@ pipeline {
     }
     stage('deliver') {
       steps {
+        withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {
+        
         sh 'echo $PATH'
         sh 'whoami'
         sh 'chmod 777 ./jenkins/scripts/deliver.sh'
         sleep 3
         sh './jenkins/scripts/deliver.sh'
+        }
       }
     }
   }

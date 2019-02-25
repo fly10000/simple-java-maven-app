@@ -16,7 +16,7 @@ pipeline {
       steps {
         sh 'echo $PATH'
         sleep 3
-        sh './jenkins/scripts/deliver.sh'
+        sh './jenkins/scripts/deliver.py'
       }
     }
   }

@@ -20,8 +20,8 @@ pipeline {
       steps {
         unstash 'app'
         sh 'chmod a+x ./jenkins/scripts/deliver.sh'
-        sleep 3
-        sh 'bash scp -r target/my-app-1.0-SNAPSHOT.jar root@10.15.4.48:/opt/jenkins/' 
+        sh 'echo'+'app'
+        sh 'bash ./jenkins/scripts/deliver.sh' 
       }
     }
   }
